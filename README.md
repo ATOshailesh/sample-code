@@ -4,7 +4,7 @@ For get information.
 ## Convert server date to Display Date
 	struct DateFormet {
 		static let serverDateFormate = "yyyy-MM-dd HH:mm:ss"
-		static let dateFormet 		 = "yyyy-MM-dd"
+		static let dateFormet 	     = "yyyy-MM-dd"
   	}
 	
  	 func convertServerDateToDisplayDateFormet() -> String {
@@ -17,3 +17,4 @@ For get information.
      		}
      		return self
  	 }
+
