@@ -41,7 +41,7 @@ For get information.
         }
 	}
 	
-### NSDictonary key validation
+### NSDictionary key validation
 	func KeyValidationFor_String(strKey: String) -> String {
 		
 		// CHECK FOR EMPTY
