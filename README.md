@@ -40,5 +40,41 @@ For get information.
             return "To day"
         }
 	}
-
+	
+### NSDictonary key validation
+	func KeyValidationFor_String(strKey: String) -> String {
+		
+		// CHECK FOR EMPTY
+		if(self.allKeys.count == 0) {
+			return String()
+		}
+		
+		// CHECK IF KEY EXIST
+		if let val = self.object(forKey: strKey) {
+			if((val as AnyObject).isEqual(NSNull())) {
+				return String()
+			}
+		} else {
+			// KEY NOT FOUND
+			return String()
+		}
+		
+		// CHECK FOR NIL VALUE
+		let aValue : AnyObject = self.object(forKey: strKey)! as AnyObject
+		if aValue.isEqual(NSNull()) {
+			return String()
+		}
+		else if(aValue.isKind(of: NSNumber.self)){
+			return String(format:"%f", (aValue as! NSNumber).doubleValue)
+		}
+		else {
+			
+			if aValue is String {
+				return self.object(forKey: strKey) as! String
+			}
+			else{
+				return String()
+			}
+		}
+	}
 
