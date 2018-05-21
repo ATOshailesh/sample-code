@@ -78,3 +78,9 @@ For get information.
 		}
 	}
 
+## Should Change Charater
+	let set = CharacterSet(charactersIn: "ABCDEFGHIJKLMONPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ").inverted
+	let set = CharacterSet(charactersIn: "@_.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-").inverted
+            if string.rangeOfCharacter(from: set) != nil{
+                shouldReturn = false
+            }
