@@ -84,3 +84,14 @@ For get information.
             if string.rangeOfCharacter(from: set) != nil{
                 shouldReturn = false
             }
+
+## Dictionary To String
+	let body = ["userName":"shailesh","userImage":"myimage.jpg"]
+        var jsonData = Data()
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+            // here "jsonData" is the dictionary encoded in JSON data
+        }catch {
+            print(error.localizedDescription)
+        }
+        let vStr = String(data: jsonData, encoding: String.Encoding.utf8) ?? ""
