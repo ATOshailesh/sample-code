@@ -231,5 +231,5 @@ extension AITextField: UITextFieldDelegate {
     }
 }
 
-//.pem file 
+### pem file Create
  - openssl pkcs12 -in /Users/atologistmac3/Downloads/yag_APNs_Distribution_Certi.p12 -out pushcert_yag.pem -nodes -clcerts
